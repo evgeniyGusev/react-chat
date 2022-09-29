@@ -1,0 +1,68 @@
+.app-contacts {
+    overflow-y: auto;
+    flex-basis: 30%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 1px 0 3px #444;
+    border-right: 1px solid #f6f6f6;
+}
+
+.title {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+}
+
+.contacts-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+}
+
+.contacts-item._online::after {
+     content: "";
+     position: absolute;
+     top: 10px;
+     left: 0;
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background: #00a900;
+ }
+
+.contacts-item._checked {
+     background: #dadada;
+}
+
+.contacts-item:hover {
+     transform: translateX(3px);
+     background: #f6f6f6;
+     box-shadow: 0 2px 2px #dadada;
+}
+
+.avatar {
+    position: relative;
+    margin-right: 7px;
+    border-radius: 50%;
+}
+
+.contact-data {
+    max-width: calc(100% - 42px);
+}
+.name {
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.last-message {
+    overflow: hidden;
+    font-size: 12px;
+    font-style: italic;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
