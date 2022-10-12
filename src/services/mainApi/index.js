@@ -16,7 +16,9 @@ export const useFetchContacts = () => {
 	}
 
 	useEffect(() => {
-		fetchContacts();
+		if (!contacts?.length) {
+			fetchContacts();
+		}
 	}, []);
 
 	return [contacts, isLoading, fetchContacts];

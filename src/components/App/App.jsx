@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useFetchContacts } from "../../services/mainApi/index.js";
 import './App.css'
 import AppContacts from '../AppContacts/AppContacts.jsx';
+import AppChat from '../AppChat/AppChat.jsx';
 
 export default function App() {
   const [checkedContact, setCheckedContact] = useState(null);
@@ -24,6 +25,8 @@ export default function App() {
         onSetContact={ setContact }
         onReload={ fetchContacts }
       />
+
+      <AppChat checkedContact={ checkedContact } />
     </div>
   )
 }
